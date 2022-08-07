@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project</title>
+</head>
+<body>
+    <center>
+    <section class="section">
+        <div class="container">
+            <h1>Number Validation System</h1>
+            <div>
+                <form>
+                    <label for="a">Value :</label>
+                    <input type="number" name="a" id="a" onkeyup="valideNumber(this.value)" /> <br>
+                    <span id="message"></span>
+                </form>
+            </div>
+        </div>
+    </section>
+</center>
+    <script>
+        const valideNumber = function(a) {
+    if(parseInt(a) < 0 || isNaN(a)){
+        document.querySelector("#message").innerHTML = "Enter a positive number";
+    }
+    else if(a){
+      let b=(a*1)+2;
+      let c=b+2;
+      let d=c+2;
+      document.querySelector("#message").innerHTML= +b+","+c+","+d;
+    }
+    else{
+        document.querySelector("#message").innerHTML= "Enter value";
+    }
+}
+    </script>
+</body>
+</html>
